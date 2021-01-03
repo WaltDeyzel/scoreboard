@@ -1,31 +1,30 @@
 /* The navbar container */
 .Head {
     overflow: hidden;
-    background-color: coral;
+    background-color: rgb(255, 208, 0);
   }
 .Head li{
   float: left;
   /* background-color: darkgreen; */
   list-style: none;
-  height: 15%;
+
 }
 
-header{
-  padding-top: 0;
-  background-color: darkseagreen;
-}
-
-#profile_button{
-  float: right;
-  font-size: large;
-  padding-right: 20px;
-  align-self: start;
-}
-
-#sight_name {
-  text-align: left;
+#site_name {
+  text-align: start;
 }
 
 #header_list {
   align-items: center;
 }
+
+#profile_image{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
