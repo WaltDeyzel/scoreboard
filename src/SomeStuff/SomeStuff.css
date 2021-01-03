@@ -1,0 +1,28 @@
+/* The navbar container */
+.SomeStuff {
+    overflow: hidden;
+    background-color: rgb(255, 224, 88);
+    padding-bottom: 0;
+  }
+
+  .SomeStuff li{
+  float: left;
+  /* background-color: darkgreen; */
+  list-style: none;
+  height: 150px;
+  width: 300px;
+  }
+  
+  
+  #user1{
+  float: right;
+  font-size: large;
+  padding-right: 20px;
+  }
+  
+  #user2 {
+  text-align: left;
+  }
+  
+
+  
