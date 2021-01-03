@@ -17,7 +17,7 @@ class App extends Component {
 
   addScoreHandler = (id) => {
     const personIndex = this.state.persons.findIndex(player => {
-        return(player.id == id);
+      return (player.id == id);
     })
     console.log(personIndex)
     //pointer --> = this.state.persons[personIndex]
@@ -29,7 +29,7 @@ class App extends Component {
     personsNew[personIndex] = player
 
     this.setState({
-        persons: personsNew
+      persons: personsNew
     })
   }
 
@@ -37,16 +37,26 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div>
-        {this.state.persons.map((person, index) => {
-            return (< Players
-                Click={() => { this.addScoreHandler(person.id) }}
-                name={person.name}
-                score={person.score}
-                key={person.id} />
-            )
-        })}
-        </div>
+        <ul>
+          <li id="nav-side"><div className='Temp'></div></li>
+          <li id="chart-side">
+            <ul>
+              <li><div className='Temp2'></div></li>
+              <li>
+                <div>
+                  {this.state.persons.map((person, index) => {
+                    return (< Players
+                      Click={() => { this.addScoreHandler(person.id) }}
+                      name={person.name}
+                      score={person.score}
+                      key={person.id} />
+                    )
+                  })}
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     );
   }
