@@ -10,7 +10,6 @@ const header = (props) => {
                 <li id='profile_button'><h4>Profile</h4></li>
             </ul>
         </header>
-
     )
 };
 

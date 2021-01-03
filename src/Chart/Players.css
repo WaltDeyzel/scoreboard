@@ -1,0 +1,15 @@
+.Player{
+    float: left;
+}
+
+.Player ul{
+    display: table;
+    width: 100%;
+    list-style: none;
+    display: table-cell;
+    text-align: center;
+    }
+
+.Player ul li{
+    background-color: rgb(236, 147, 147);
+}
