@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Body persons={this.state.persons}/>
+        <Body persons={this.state.persons} scoreAdd={this.addScoreHandler}/>
       </div>
     );
   }

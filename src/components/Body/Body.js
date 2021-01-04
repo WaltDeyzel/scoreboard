@@ -16,7 +16,7 @@ const body = (props) => {
                             <div>
                                 {props.persons.map((person, index) => {
                                     return (< Players
-                                        Click={() => { this.addScoreHandler(person.id) }}
+                                        Click={() => { props.scoreAdd(person.id) }}
                                         name={person.name}
                                         score={person.score}
                                         key={person.id} />
