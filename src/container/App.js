@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from "./Head/Head";
-import Players from "./Chart/Players"
+import Header from "../components/Head/Head";
+import Players from "../components/Chart/Players"
 
 class App extends Component {
   //STATE CONTAINS THE DATA FROM SERVER/DATABASE
