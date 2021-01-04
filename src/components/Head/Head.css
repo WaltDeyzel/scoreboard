@@ -3,6 +3,10 @@
     overflow: hidden;
     background-color: rgb(255, 208, 0);
     z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
   }
 .Head li{
   float: left;

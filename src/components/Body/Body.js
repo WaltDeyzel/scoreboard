@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Body.css'
 import './Navbar/Navbar.css';
+import './Chart/Chart.css'
 import Players from './Chart/Players'
 
 const body = (props) => {
@@ -12,7 +13,7 @@ const body = (props) => {
                 <li id="nav-side"><div className='Navbar'></div></li>
                 <li id="chart-side">
                     <ul>
-                        <li><div className='Temp2'></div></li>
+                        <li><div className='Chartbar'></div></li>
                         <li>
                             <div>
                                 {props.persons.map((person, index) => {
