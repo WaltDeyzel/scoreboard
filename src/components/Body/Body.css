@@ -1,0 +1,26 @@
+#nav-side{
+    float: left;
+  }
+  
+  #chart-side{
+    float: left;
+  }
+  
+  .Temp{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 670px;
+    background-color: darkblue;
+    border-radius: 20px;
+  
+  }
+  
+  .Temp2{
+    margin: 0;
+    padding: 0;
+    width: 1160px;
+    height: 550px;
+    background-color: rgb(23, 139, 0);
+    border-radius: 20px;
+  }
