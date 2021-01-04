@@ -2,6 +2,7 @@
 .Head {
     overflow: hidden;
     background-color: rgb(255, 208, 0);
+    z-index: 0;
   }
 .Head li{
   float: left;

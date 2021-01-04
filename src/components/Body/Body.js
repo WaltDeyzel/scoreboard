@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Body.css'
+import './Navbar/Navbar.css';
 import Players from './Chart/Players'
 
 const body = (props) => {
@@ -8,7 +9,7 @@ const body = (props) => {
     return (
         <div>
             <ul>
-                <li id="nav-side"><div className='Temp'></div></li>
+                <li id="nav-side"><div className='Navbar'></div></li>
                 <li id="chart-side">
                     <ul>
                         <li><div className='Temp2'></div></li>
