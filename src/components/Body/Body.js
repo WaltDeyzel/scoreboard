@@ -3,7 +3,7 @@ import React from 'react';
 import './Body.css'
 import './Navbar/Navbar.css';
 import './Chart/Chart.css'
-import Players from './Chart/Players'
+import Players from './Players/Players'
 
 const body = (props) => {
 
