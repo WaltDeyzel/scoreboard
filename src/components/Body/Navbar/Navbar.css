@@ -1,6 +1,6 @@
 .Navbar{
     height: calc(100%); /* Full-height: remove this if you want "auto" height */
-    width: 80px; /* Set the width of the sidebar */
+    width: 50px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 0; /* Stay on top */
     left: 0;
@@ -11,4 +11,5 @@
 
 .Navbar:hover{
     width: 160px;
+    background-color: rgb(216, 176, 0);
 }
