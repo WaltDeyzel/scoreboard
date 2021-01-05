@@ -18,7 +18,7 @@ class App extends Component {
 
   addScoreHandler = (id) => {
     const personIndex = this.state.persons.findIndex(player => {
-      return (player.id == id);
+      return (player.id === id);
     })
     console.log(personIndex)
     //pointer --> = this.state.persons[personIndex]
