@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from "../components/Head/Head";
 import Body from "../components/Body/Body"
+import Layout from "../components/Layout/Layout"
 
 class App extends Component {
   //STATE CONTAINS THE DATA FROM SERVER/DATABASE
@@ -36,8 +37,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <Body persons={this.state.persons} scoreAdd={this.addScoreHandler}/>
+        <Layout>
+          <Header/>
+          <Body persons={this.state.persons} scoreAdd={this.addScoreHandler} />
+        </Layout>
       </div>
     );
   }
