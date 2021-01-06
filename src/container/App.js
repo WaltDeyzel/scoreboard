@@ -35,11 +35,21 @@ class App extends Component {
   }
 
   render() {
+
+    //make list of names and scores:
+    var playerNames =[];
+    var playerScores =[];
+    for (let key in this.state.persons){
+        //console.log(this.state.persons[key].name)
+        playerNames.push(this.state.persons[key].name)
+        playerScores.push(this.state.persons[key].score)
+    }
+
     return (
       <div className="App">
         <Layout>
           <Header/>
-          <Body persons={this.state.persons} scoreAdd={this.addScoreHandler} />
+          <Body persons={this.state.persons} scoreAdd={this.addScoreHandler} names={playerNames} scores = {playerScores} />
         </Layout>
       </div>
     );
