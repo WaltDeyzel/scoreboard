@@ -4,7 +4,7 @@ import './Body.css'
 import Aux from '../../hoc/Auxx'
 import PlayerCard from './PlayerCard/PlayerCard';
 import NavBar from './Navbar/Navbar';
-import Chart from './Chart/BarChart'
+import Chart from './Chart/MainChart'
 
 const body = (props) => {
 
