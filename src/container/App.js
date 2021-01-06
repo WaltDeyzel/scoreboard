@@ -9,10 +9,10 @@ class App extends Component {
   //STATE CONTAINS THE DATA FROM SERVER/DATABASE
   state = {
     persons: [
-      { id: 'dgds', name: 'Walt', score: 21 },
-      { id: 'asgr', name: 'Lynn', score: 22 },
-      { id: 'asfr', name: 'Jessica', score: 23 },
-      { id: 'frad', name: 'Damon', score: 23 },
+      { id: 'dgds', name: 'Walt', score: 21, colour: 'rgba(255, 99, 132, 0.6)' },
+      { id: 'asgr', name: 'Lynn', score: 22, colour: 'rgba(255, 206, 86, 0.6)'},
+      { id: 'asfr', name: 'Jessica', score: 23, colour: 'rgba(54, 162, 235, 0.6)' },
+      { id: 'frad', name: 'Damon', score: 23, colour: 'rgba(75, 192, 192, 0.6)'},
     ]
   }
 
@@ -39,17 +39,19 @@ class App extends Component {
     //make list of names and scores:
     var playerNames =[];
     var playerScores =[];
+    var playerColours=[];
     for (let key in this.state.persons){
         //console.log(this.state.persons[key].name)
         playerNames.push(this.state.persons[key].name)
         playerScores.push(this.state.persons[key].score)
+        playerColours.push(this.state.persons[key].colour)
     }
 
     return (
       <div className="App">
         <Layout>
           <Header/>
-          <Body persons={this.state.persons} scoreAdd={this.addScoreHandler} names={playerNames} scores = {playerScores} />
+          <Body persons={this.state.persons} scoreAdd={this.addScoreHandler} names={playerNames} scores = {playerScores} colours={playerColours} />
         </Layout>
       </div>
     );

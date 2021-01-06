@@ -1,7 +1,7 @@
 import React from 'react';
 import './BarChart.css'
 
-import {Bar,defaults} from 'react-chartjs-2' //use cntrl space within {} to see what we you import 
+import {Bar,defaults,Pie} from 'react-chartjs-2' //use cntrl space within {} to see what we you import 
 import players from '../Players/Players';
 
 defaults.global.legend.position = 'bottom';
@@ -16,6 +16,7 @@ const barchart = (props) => {
         //if colours given an array of values they will be assigned according to labels 
         //      ^- maybe later give a list of colours chosen in profile section?
         <div>
+            <div>
             <Bar
                 data = {{
                     //a list of names:
@@ -25,8 +26,9 @@ const barchart = (props) => {
                             label: 'Overall Winnings',
                             //data needs a list of numbers
                             data: props.scores,
-                            backgroundColor:'rgba(153, 102, 255, 0.6)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
+                            //backgroundColor:'rgba(153, 102, 255, 0.6)',
+                            backgroundColor: props.colours,
+                            borderColor: 'black',
                             borderWidth:2,
                         },
                         {
@@ -55,6 +57,33 @@ const barchart = (props) => {
             >
                 
             </Bar>
+            </div>
+            <div>
+            <Pie
+                data = {{
+                    //a list of names:
+                    labels: props.names,
+                    datasets: [
+                        {
+                            label: 'Overall Winnings',
+                            //data needs a list of numbers
+                            data: props.scores,
+                            backgroundColor: props.colours,
+                            borderColor: 'black',
+                            borderWidth:2,
+                        },
+                    ]
+                }}
+                height = {25}
+                width = {100} 
+                //type='doughnut'
+               
+            >
+                
+            </Pie>
+            </div>
+            
+           
         </div>
     );
 }
