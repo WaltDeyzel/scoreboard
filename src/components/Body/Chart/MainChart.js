@@ -1,77 +1,91 @@
 import React from 'react';
 import './MainChart.css'
 
-import {Bar,defaults,Pie} from 'react-chartjs-2' //use cntrl space within {} to see what we you import 
-import players from '../Players/Players';
+import { Bar, defaults, Pie } from 'react-chartjs-2' //use cntrl space within {} to see what we you import 
+//import players from '../Players/Players';
 
 defaults.global.legend.position = 'bottom';
 const barchart = (props) => {
+
+    const names = [...props.persons].map(person => {
+        return person.name;
+    });
+
+    const scores = [...props.persons].map(person => {
+        return person.score;
+    });
+
+    const colours = [...props.persons].map(person => {
+        return person.colour;
+    });
+
+
+
     return (
         //data {{}} outer: dynamic javascript content. inner javascript object
         <div>
             <div>
                 <Bar
-                    data = {{
+                    data={{
                         //a list of names:
-                        labels: props.names,
+                        labels: names,
                         datasets: [
                             {
                                 label: 'Overall Winnings',
-                                data: props.scores,
-                                backgroundColor: props.colours,
+                                data: scores,
+                                backgroundColor: colours,
                                 borderColor: 'black',
-                                borderWidth:2,
+                                borderWidth: 2,
                             },
                             {
                                 //if we wanted to put it all on one graph, maybe one graph on a different page with all the games
                                 label: 'Rummikub Winnings',
                                 data: [15, 10],
-                                backgroundColor:'rgba(54, 162, 235, 0.6)',
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
                                 borderColor: 'rgba(54, 162, 235, 1)',
-                                borderWidth:2,
+                                borderWidth: 2,
                             }
                         ]
                     }}
-                    height = {400}
-                    width = {200} 
+                    height={400}
+                    width={200}
                     options={{
-                        maintainAspectRatio:false,
-                        scales:{
+                        maintainAspectRatio: false,
+                        scales: {
                             yAxes: [
                                 {
-                                    ticks:{
+                                    ticks: {
                                         beginAtZero: true,
                                     }
                                 }
                             ]
                         }
                     }}
-                >
-                    
-                </Bar>
+                />
+
             </div>
 
             <div>
                 <Pie
-                    data = {{
-                        labels: props.names,
+                    data={{
+                        labels: names,
                         datasets: [
                             {
                                 label: 'Overall Winnings',
-                                data: props.scores,
-                                backgroundColor: props.colours,
+                                data: scores,
+                                backgroundColor: colours,
                                 borderColor: 'black',
-                                borderWidth:2,
+                                borderWidth: 2,
                             },
                         ]
                     }}
-                    height = {25}
-                    width = {100}                
-                > 
-                </Pie>
+                    height={25}
+                    width={100}
+                />
+
             </div>
-            
-           
+
+
         </div>
     );
 }

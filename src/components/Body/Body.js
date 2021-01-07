@@ -11,7 +11,7 @@ const body = (props) => {
     return (
         <Aux>
             <NavBar/>
-            <Chart names={props.names} scores={props.scores} colours={props.colours}/>
+            <Chart persons = {props.persons}/>
             <PlayerCard players={props.persons} scoreAdd={props.scoreAdd}/>
         </Aux>
     ); 
