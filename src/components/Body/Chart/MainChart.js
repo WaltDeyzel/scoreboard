@@ -7,19 +7,16 @@ import { Bar, defaults, Pie } from 'react-chartjs-2' //use cntrl space within {}
 defaults.global.legend.position = 'bottom';
 const barchart = (props) => {
 
-    const names = [...props.persons].map(person => {
-        return person.name;
-    });
-
-    const scores = [...props.persons].map(person => {
-        return person.score;
-    });
-
-    const colours = [...props.persons].map(person => {
-        return person.colour;
-    });
-
-
+    const names =[];
+    const scores =[];
+    const colours =[];
+    
+    for (let index in props.persons){
+        //console.log(this.state.persons[key].name)
+        names.push(props.persons[index].name)
+        scores.push(props.persons[index].score)
+        colours.push(props.persons[index].colour)
+    }
 
     return (
         //data {{}} outer: dynamic javascript content. inner javascript object
