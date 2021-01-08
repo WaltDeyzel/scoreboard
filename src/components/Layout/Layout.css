@@ -1,4 +1,14 @@
 .Content{
     margin-top: 120px;
-    padding-left: 100px;
+    margin-left: 190px;
+    margin-right: 50px;
 }   
+
+@media (max-width: 700px){
+    .Content{
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 50px;
+    }
+}
+

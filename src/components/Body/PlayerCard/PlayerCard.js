@@ -1,19 +1,17 @@
 import React from 'react';
 
-import Players from '../Players/Players'
+import "./PlayerCard.css";
 
-const playerCard = (props) => {
+const players = (props) => {
+
     return (
-
-        props.players.map((person, index) => {
-            return (< Players
-                Click={() => { props.scoreAdd(person.id) }}
-                name={person.name}
-                score={person.score}
-                key={person.id} />
-            );
-        })
-    );
+        <div className='Player'>
+            <ul >
+                <li><h3>{props.score}</h3></li>
+                <li onClick={props.Click}><h3>{props.name}</h3></li>
+            </ul>
+        </div>
+    )
 }
 
-export default playerCard;
+export default players;

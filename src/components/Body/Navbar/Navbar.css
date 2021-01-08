@@ -4,12 +4,26 @@
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 0; /* Stay on top */
     left: 0;
-    top: 100px;
+    top: 95px;
     background-color: rgb(255, 208, 0);
     overflow-x: hidden; /* Disable horizontal scroll */
   }
 
+@media (max-width: 700px){
+  .Navbar{
+    height: 50px; 
+    width: 100%; 
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+  }
+}
 .Navbar:hover{
+  background-color: rgb(216, 176, 0);
+}
+
+@media (min-width: 700px){
+  .Navbar:hover{
     width: 160px;
-    background-color: rgb(216, 176, 0);
+  }
 }

@@ -7,6 +7,7 @@ import { Bar, defaults, Pie } from 'react-chartjs-2' //use cntrl space within {}
 defaults.global.legend.position = 'bottom';
 const barchart = (props) => {
 
+
     const names =[];
     const scores =[];
     const colours =[];
