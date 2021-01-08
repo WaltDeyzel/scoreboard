@@ -1,17 +1,16 @@
 .Player{
-    float: left;
+    width: 100%;
+	background-color: #cf8f2e;
 }
 
-.Player ul{
-    display: table;
-    width: 100%;
-    list-style: none;
-    display: table-cell;
-    text-align: center;
-    }
-
+.Card{
+	display: flex;
+    flex-flow:row;
+	float: left;
+}
+    
 .Player ul li{
-    width:80%;
+    width:100px;
     box-shadow: 5px 6px 0px 0px #97c4fe;/* h-offset v-offset blur spread color */
 	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
 	background-color:#3d94f6;
@@ -22,10 +21,8 @@
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
-	padding:7px 25px;
 	text-decoration:none;
     text-shadow:0px 1px 0px #1570cd;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
