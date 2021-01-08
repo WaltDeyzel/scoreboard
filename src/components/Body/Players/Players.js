@@ -1,18 +1,21 @@
 import React from 'react';
 
 import Players from '../PlayerCard/PlayerCard'
+import './Player.css'
 
 const playerCard = (props) => {
     return (
-
-        props.players.map((person, index) => {
+        <div className={'Cards'}>
+        {props.players.map((person, index) => {
             return (< Players
                 Click={() => { props.scoreAdd(person.id) }}
                 name={person.name}
                 score={person.score}
                 key={person.id} />
+            
             );
-        })
+        })}
+        </div>
     );
 }
 
