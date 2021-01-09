@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import './MainPage.css';
 import Aux from '../../hoc/Auxx';
-import Players from '../../components/Body/Players/Players';
-import NavBar from '../../components/Body/Navbar/Navbar';
-import Chart from '../../components/Body/Chart/MainChart';
+import Players from '../../components/Players/Players';
+import NavBar from '../../components/Navbar/Navbar';
+import Chart from '../../components/Chart/MainChart';
 
 class MainPage extends Component {
 
