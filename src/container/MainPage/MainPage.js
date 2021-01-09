@@ -41,7 +41,7 @@ class MainPage extends Component {
             <Aux>
                 <NavBar />
                 <Chart persons={this.state.persons} />
-                <Players players={this.state.persons} scoreAdd={this.state.scoreAdd} />
+                <Players players={this.state.persons} scoreAdd={this.addScoreHandler} />
             </Aux>
         );
     }

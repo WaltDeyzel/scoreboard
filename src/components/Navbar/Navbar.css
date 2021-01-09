@@ -27,3 +27,11 @@
     width: 160px;
   }
 }
+
+.Things{
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  
+}
