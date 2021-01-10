@@ -1,0 +1,14 @@
+.leftbox{
+    position: absolute;
+    zoom: 150%;
+    left: 10%;
+}
+
+
+.prompt{
+    /* for all prompts in tables */
+    width: 40%;
+}
+
+#name{
+}
