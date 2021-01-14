@@ -4,9 +4,10 @@
 
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
-    
-    border-radius: 10px;
+    justify-content: space-between;
     background-color: blueviolet;
+    border-radius: 10px;
     margin-bottom: 5px;
+    padding-left: 55px;
+    padding-right: 55px;
 }

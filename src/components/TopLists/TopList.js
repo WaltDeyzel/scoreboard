@@ -14,7 +14,7 @@ const topList = (props) => {
            <h1>SCORE</h1>
            {
                players.map( (player, index) => {
-                   return <TopListTile player={player} />;
+                   return <TopListTile name={player.name} amount={player.score}/>;
                })
            }
        </div>

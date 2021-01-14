@@ -1,6 +1,7 @@
 .TopList{
     background-color: rgb(198, 149, 238);
-    width: 100%;
+    width: 33%;
     height: 400px;
     border-radius: 15px;
+    margin-bottom: 20px;
 }

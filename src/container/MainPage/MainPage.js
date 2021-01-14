@@ -4,7 +4,7 @@ import './MainPage.css';
 import Aux from '../../hoc/Auxx';
 import Players from '../../components/Players/Players';
 import Chart from '../../components/Chart/MainChart';
-import TopList from '../../components/TopLists/TopList'
+import Rankings from '../../components/Rankings/Rankings'
 
 class MainPage extends Component {
 
@@ -41,7 +41,7 @@ class MainPage extends Component {
             <Aux>
                 <Chart persons={this.state.persons} />
                 <Players players={this.state.persons} scoreAdd={this.addScoreHandler} />
-                <TopList players={this.state.persons} />
+                <Rankings players={this.state.persons} />
             </Aux>
         );
     }

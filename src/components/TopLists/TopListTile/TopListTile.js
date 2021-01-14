@@ -4,8 +4,8 @@ import './TopListTile.css'
 const topListTile = (props) => {
    return(
        <div className={'TopListTile'}>
-           <h2>{props.player.name}</h2>
-           <h2>{props.player.score}</h2>
+           <h2>{props.name}</h2>
+           <h2>{props.amount}</h2>
        </div>
    );
 }
