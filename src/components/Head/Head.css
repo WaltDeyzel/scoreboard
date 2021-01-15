@@ -24,6 +24,7 @@ align-items: center;
 }
 
 #profile_image{
+  object-fit: cover; /*this makes the picture fill not stretch */
   display: block;
   position: absolute;
   top: 50%;

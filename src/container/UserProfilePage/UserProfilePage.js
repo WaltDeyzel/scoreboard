@@ -7,6 +7,7 @@ class ProfilePage extends Component {
         // TO DO: get past info of user
         // TO DO: save this info to database when button clicked
         // TO DO: use picture selected here in header
+        // TO DO: limit amount of chars of nickname
 
         // minor issue: box around button when clicked
 
@@ -69,6 +70,13 @@ class ProfilePage extends Component {
                         Save
                     </button>
                 </div>     
+                <div class="rightbox"> {/* this box also acts as a border for the card */}
+                <div id="userName">user name</div>
+                    <img id="profilePic" src="https://images.fd.nl/archive/77923_nieuwe-bronnen2web.jpg?fit=crop&crop=faces&auto=format%2Ccompress&q=45&w=360&h=360&fm=jpg&cs=tinysrgb"></img>
+                </div>
+
+
+
             </div>
         );
     }
