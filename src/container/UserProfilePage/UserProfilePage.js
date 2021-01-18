@@ -2,6 +2,15 @@ import React, { Component } from 'react'
 import './UserProfilePage.css'
 
 class ProfilePage extends Component {
+    
+
+
+    saveHandler() {
+        //get new stuff to be displayed
+        this.picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
+        console.log("here!")
+      }
+
     render(){
 
         // TO DO: get past info of user
@@ -14,6 +23,17 @@ class ProfilePage extends Component {
         // TO DO: make button do stuff
 
         // minor issue: box around button when clicked
+
+        var picaddress = "https://images.fd.nl/archive/77923_nieuwe-bronnen2web.jpg?fit=crop&crop=faces&auto=format%2Ccompress&q=45&w=360&h=360&fm=jpg&cs=tinysrgb"
+        //picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
+
+
+        function saveHandler() {
+            //bla
+            picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
+            console.log("here!")
+          }
+        
 
         return(
             <div>
@@ -69,16 +89,15 @@ class ProfilePage extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <h5>Don't forget to save your changes!</h5>
-                    <button id="ProfileSave">
-                        Save
-                    </button>
+                <h5>Don't forget to save your changes!</h5>
+                <button id="ProfileSave" onClick={saveHandler}>
+                    Save
+                </button>
                 </div>     
                 <div class="rightbox"> {/* this box also acts as a border for the card */}
                     <div id="userName">Walt</div>
-                    <img id="profilePic" src="https://images.fd.nl/archive/77923_nieuwe-bronnen2web.jpg?fit=crop&crop=faces&auto=format%2Ccompress&q=45&w=360&h=360&fm=jpg&cs=tinysrgb"></img>
+                    <img id="profilePic" src={picaddress}></img>
                     <div id="strength">Best game: Chess</div>
-                    
                     <div id="winRatio">9/10</div>
                     <div id="winRatioPrompt">wins/total games</div>
                     
