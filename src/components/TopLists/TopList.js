@@ -14,7 +14,12 @@ const topList = (props) => {
            <h1>SCORE</h1>
            {
                players.map( (player, index) => {
-                   return <TopListTile name={player.name} amount={player.score}/>;
+                   if( index < 4){
+                    return <TopListTile name={player.name} amount={player.score}/>;
+                   }
+                   else{
+                       return
+                   }
                })
            }
        </div>

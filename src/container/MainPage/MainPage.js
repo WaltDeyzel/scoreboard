@@ -15,6 +15,7 @@ class MainPage extends Component {
       { id: 'asgr', name: 'Lynn', score: 22, colour: 'rgba(255, 206, 86, 0.6)'},
       { id: 'asfr', name: 'Jessica', score: 23, colour: 'rgba(54, 162, 235, 0.6)' },
       { id: 'frad', name: 'Damon', score: 23, colour: 'rgba(75, 192, 192, 0.6)'},
+      { id: 'ssfr', name: 'asdsad', score: 42, colour: 'rgba(54, 162, 235, 0.6)' },
     ]
   }
 
