@@ -1,15 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState} from 'react'
 import './UserProfilePage.css'
+import firebase from "../../utils/firebase"
 
 class ProfilePage extends Component {
-    
 
-
-    saveHandler() {
-        //get new stuff to be displayed
-        this.picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
-        console.log("here!")
-      }
 
     render(){
 
@@ -22,18 +16,36 @@ class ProfilePage extends Component {
         // TO DO: fix scaling
         // TO DO: make button do stuff
 
+        // TO DO: use cookies or something to find which player 
+
         // minor issue: box around button when clicked
 
-        var picaddress = "https://images.fd.nl/archive/77923_nieuwe-bronnen2web.jpg?fit=crop&crop=faces&auto=format%2Ccompress&q=45&w=360&h=360&fm=jpg&cs=tinysrgb"
-        //picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
+        const playerRef = firebase.database().ref("Players").child("MRQsg8BBks1r2hbty4t"); //TO DO find generically
+        // const player = playerRef.val();
+        // playerRef.get(name)
+        // console.log(playerRef.get)
+        // console.log(playerRef.pictureid)
 
+        
 
+        // useEffect(() => {
+        //     playerRef.on("value",(snapshot)=>{ //on value change in database, snapshot is a function saying what it should do
+        //         //const name = snapshot.val("name"); //object containing all todo objects
+        //        // console.log(name);
+             
+            
+        // });
+        // },[]);
+           
+        const picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
+        // const picaddress = playerRef.pictureid;
         function saveHandler() {
             //bla
             picaddress="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg"
             console.log("here!")
           }
         
+        //   picaddress = playerRef.val().pictureid;
 
         return(
             <div>
