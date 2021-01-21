@@ -4,6 +4,7 @@ import './MainPage.css';
 import Aux from '../../hoc/Auxx';
 import Players from '../../components/Players/Players';
 import Chart from '../../components/Chart/MainChart';
+import Rankings from '../../components/Rankings/Rankings'
 
 class MainPage extends Component {
 
@@ -14,6 +15,7 @@ class MainPage extends Component {
       { id: 'asgr', name: 'Lynn', score: 22, colour: 'rgba(255, 206, 86, 0.6)'},
       { id: 'asfr', name: 'Jessica', score: 23, colour: 'rgba(54, 162, 235, 0.6)' },
       { id: 'frad', name: 'Damon', score: 23, colour: 'rgba(75, 192, 192, 0.6)'},
+      { id: 'ssfr', name: 'asdsad', score: 42, colour: 'rgba(54, 162, 235, 0.6)' },
     ]
   }
 
@@ -40,6 +42,7 @@ class MainPage extends Component {
             <Aux>
                 <Chart persons={this.state.persons} />
                 <Players players={this.state.persons} scoreAdd={this.addScoreHandler} />
+                <Rankings players={this.state.persons} />
             </Aux>
         );
     }

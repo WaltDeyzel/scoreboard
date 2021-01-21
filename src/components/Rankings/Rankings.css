@@ -1,0 +1,12 @@
+.Rankings{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+/* SMALL screen */
+@media (max-width: 700px){
+    .Rankings{
+        flex-flow: column;
+    }
+  }
