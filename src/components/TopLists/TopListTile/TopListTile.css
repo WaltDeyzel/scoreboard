@@ -1,0 +1,28 @@
+.TopListTile{
+    text-align: center;
+    color: rgb(211, 180, 45);
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+/* SMALL screen */
+@media (max-width: 700px){
+    .TopListTile{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 1400px){
+    .TopListTile{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

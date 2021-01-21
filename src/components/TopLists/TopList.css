@@ -1,0 +1,16 @@
+.TopList{
+    background-color: rgb(198, 149, 238);
+    width: 30%;
+    height: 400px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* SMALL screen */
+@media (max-width: 700px){
+    .TopList{
+        width: 90%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
