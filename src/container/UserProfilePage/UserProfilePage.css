@@ -125,7 +125,7 @@
 		position: absolute;
 		width: 20vw;
   		height: 30vw;
-		background: lightgrey;
+		/* background: lightgrey; */
 		border: 3px ridge #000000;	
 		border-radius: 9px;
 	
@@ -145,7 +145,7 @@
 		right:20%;
 		width: 20vw;
   		height: 30vw;
-		background: lightgrey;
+		/* background: lightgrey; */
 		border: 3px ridge #000000;	
 		border-radius: 9px;
 	

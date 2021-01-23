@@ -22,7 +22,7 @@ class App extends Component {
             <Header />
             <NavBar />
             <Route path="/" exact component={MainPage}/>
-            <Route path="/user-profile" component={UserProfilePage}/>
+            <Route path="/user-profile" component={UserProfilePage} />
             <Route path="/user-stats" exact component={UserStatsPage}/>
             <Route path="/to-do" component={ToDoPage}/>
           </Layout>

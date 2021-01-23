@@ -2,16 +2,16 @@ import React, { Component, useEffect, useState, setState, forceUpdate} from 'rea
 import './UserProfilePage.css'
 import firebase from "../../utils/firebase"
 
-class ProfilePage extends Component {
+class UserProfilePage extends Component {
     constructor() {
         super();
+        //console.log(this.props.test)
         this.state = {
-			list: []
+          //  source: this.props.source
 		}
     }
 
     render() {
-
         // TO DO: get past info of user
         // TO DO: save this info to database when button clicked
         // TO DO: use picture selected here in header
@@ -20,37 +20,52 @@ class ProfilePage extends Component {
         // TO DO: make this card generic so it can be used on other pages
         // TO DO: fix scaling
         // TO DO: make button do stuff
+        // TO DO: refresh the ppage upon saving - later with states
+        // TO DO: on retrieve, put into state
 
         // TO DO: use cookies or something to find which player 
 
         // minor issue: box around button when clicked
 
-        var picaddress = ""
+        
 
-        var ref = firebase.database().ref("Players");
+        var ref = firebase.database().ref("Players"); //reference to players in database
 
-        function saveHandler() { //currently only updates picture
+        function saveHandler() { //when save clicked
+            var child = firebase.database().ref("Players").child("-MRQsg8BBks1r2hbty4t"); //TO DO: make generic
+
             var givenAddress = document.getElementById('linkInput').value;
             if (givenAddress === "") { } //if the address given is empty, dont update database
             else {
-                var child = firebase.database().ref("Players").child("-MRQsg8BBks1r2hbty4t");
                 child.update({
                     pictureid: givenAddress,
                 })
-                // this.forceUpdate(); //like refreshing the page
-                // this.setState(this.state);
             }
             
+            var givenName = document.getElementById('nameInput').value;
+            if (givenName === "") { } //if the name given is empty, dont update database
+            else {
+                child.update({
+                    name: givenName,
+                })
+            }            
         }
 
 
-
+        //Get values from database that need to be put onto card:
+        //TO DO: pull once from state or something
+        var picaddress = "";
+        var name = "";
+        var colour="lightblue";
         ref.on("value", function (snapshot) { //on a change in the database
             snapshot.forEach(function (childSnapshot) { //for each player
+            
                 var childData = childSnapshot.val(); //get the data of the plater
-                if (childData.name == "Walt") { //if that player is Walt
+                if (childData.id == 143) { //if that player is Walt with given id 143
                     //TO DO: make generic find
                     picaddress = childData.pictureid; //get that picture id
+                    name = childData.name;
+                    
                 }
                // console.log(picaddress)
             });
@@ -68,7 +83,7 @@ class ProfilePage extends Component {
                             <tr class="row1">
                                 <td class="prompt">Nickname:</td>
                                 <td>
-                                    <input type="text" name="name" id="name" ></input>
+                                    <input type="text" id="nameInput" name="name" ></input>
                                 </td>
                             </tr>
                             <tr class="row2">
@@ -118,9 +133,11 @@ class ProfilePage extends Component {
                         Save
                 </button>
                 </div>
-                <div class="rightbox"> {/* this box also acts as a border for the card */}
-                    <div id="userName">Walt</div>
-                    <img id="profilePic" src={picaddress} alt="cannot display"></img>
+                <div class="rightbox" style={{
+                                        background: colour,}}> {/* this box also acts as a border for the card */}
+                    <div id="userName">{name}</div>
+                    <img id="profilePic" src={picaddress} alt="cannot display" key={Date.now()} ></img>
+                    {/* key={this.state.source.uri} */}
                     <div id="strength">Best game: Chess</div>
                     <div id="winRatio">9/10</div>
                     <div id="winRatioPrompt">wins/total games</div>
@@ -134,4 +151,4 @@ class ProfilePage extends Component {
     }
 
 }
-export default ProfilePage;
+export default UserProfilePage;
