@@ -7,7 +7,8 @@
 
 .entryfield{
     /* change this if you want the selector thingy to look smaller */
-    padding-right: 63%;    
+	padding-right: 20%;
+	margin-bottom: 1%; 
 }
 
 #ProfileSave {

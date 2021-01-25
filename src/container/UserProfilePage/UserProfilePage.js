@@ -3,15 +3,24 @@ import './UserProfilePage.css'
 import firebase from "../../utils/firebase"
 
 class UserProfilePage extends Component {
+    state = {
+        colourChoice:""
+    }
+
     constructor() {
         super();
         //console.log(this.props.test)
-        this.state = {
-          //  source: this.props.source
-		}
+        // this.state = {
+        //   //  source: this.props.source
+        //   colourChoice:"",
+        // }
     }
 
     render() {
+        //NB: I think the issue is because the constructor is not being called, the state is not being created there
+
+        
+
         // TO DO: get past info of user
         // TO DO: save this info to database when button clicked
         // TO DO: use picture selected here in header
@@ -27,8 +36,7 @@ class UserProfilePage extends Component {
 
         // minor issue: box around button when clicked
 
-        
-
+        var chosenColour = this.state.colourChoice; //for some reason it doesnt let me use this.state.colourchoice in the function which is why it's here
         var ref = firebase.database().ref("Players"); //reference to players in database
 
         function saveHandler() { //when save clicked
@@ -48,7 +56,14 @@ class UserProfilePage extends Component {
                 child.update({
                     name: givenName,
                 })
-            }            
+            }    
+            
+            if(chosenColour==""){}
+            else{
+                child.update({
+                   colour: chosenColour,
+                })
+            }
         }
 
 
@@ -56,7 +71,7 @@ class UserProfilePage extends Component {
         //TO DO: pull once from state or something
         var picaddress = "";
         var name = "";
-        var colour="lightblue";
+        var colour="";
         ref.on("value", function (snapshot) { //on a change in the database
             snapshot.forEach(function (childSnapshot) { //for each player
             
@@ -65,7 +80,7 @@ class UserProfilePage extends Component {
                     //TO DO: make generic find
                     picaddress = childData.pictureid; //get that picture id
                     name = childData.name;
-                    
+                    colour = childData.colour;
                 }
                // console.log(picaddress)
             });
@@ -88,25 +103,30 @@ class UserProfilePage extends Component {
                             </tr>
                             <tr class="row2">
                                 <td class="prompt">Colour:</td>
-                                <select name="color" id="color" class="entryfield">
-                                    <option value="Yellow">
+                                <select name="color" id="color" class="entryfield"
+                                onChange={(e) => this.setState({ colourChoice: e.target.value })}>
+                                    <option value="yellow">
                                         Yellow
                                     </option>
 
-                                    <option value="Blue">
+                                    <option value="lightblue">
+                                        Light Blue
+                                    </option>
+                                    
+                                    <option value="blue">
                                         Blue
                                     </option>
 
-                                    <option value="Gray">
-                                        Black
+                                    <option value="lightgrey">
+                                        Light Grey
                                     </option>
 
-                                    <option value="Red">
+                                    <option value="red">
                                         Red
                                     </option>
 
-                                    <option value="Green">
-                                        Green
+                                    <option value="lightgreen">
+                                        Light Green
                                     </option>
 
                                     <option value="Purple">
@@ -115,6 +135,14 @@ class UserProfilePage extends Component {
 
                                     <option value="Pink">
                                         Pink
+                                    </option> 
+                                    
+                                    <option value="gold">
+                                        Gold
+                                    </option>
+                                    
+                                    <option value="white">
+                                        White
                                     </option>
 
                                 </select>
